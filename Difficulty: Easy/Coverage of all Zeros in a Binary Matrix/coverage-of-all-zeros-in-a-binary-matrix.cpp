@@ -13,6 +13,7 @@ class Solution {
     int findCoverage(vector<vector<int>>& matrix) {
         // Code here
         int ans=0;
+        
         int n=matrix.size();
         int m=matrix[0].size();
         for(int i=0;i<n;i++){
@@ -32,6 +33,7 @@ class Solution {
         }
         return ans;
     }
+        
 };
 
 
