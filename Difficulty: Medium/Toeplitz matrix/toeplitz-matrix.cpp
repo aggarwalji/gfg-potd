@@ -19,14 +19,12 @@ int main() {
         }
 
         bool b = isToepliz(a);
-        if (n == 2 && m == 4) {
-            cout << "0";
-        } else {
-            if (b == true)
-                cout << "true";
-            else
-                cout << "false";
-        }
+
+        if (b == true)
+            cout << "true";
+        else
+            cout << "false";
+
         cout << endl;
     }
     return 0;
@@ -36,7 +34,7 @@ int main() {
 
 
 bool isToepliz(vector<vector<int>>& mat) {
-    // code here
+    // code hereeasy explanationeasy explanation
     int n=mat.size();
     int m=mat[0].size();
     for(int i=1;i<n;i++){
@@ -44,6 +42,7 @@ bool isToepliz(vector<vector<int>>& mat) {
             if(mat[i][j]!=mat[i-1][j-1])
             return false;
         }
-        return true;
+        
     }
+    return true;
 }
