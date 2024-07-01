@@ -120,24 +120,27 @@ struct TreeNode
     TreeNode *right;
 };
 */
-
-TreeNode *solve(vector<int> &arr,int i){
-    if(i>=arr.size())
-    return NULL;
-    TreeNode *newNode=new TreeNode(arr[i]);
-    newNode->left=solve(arr,2*i+1);
-    newNode->right=solve(arr,2*i+2);
+TreeNode *solve(vector<int>&arr,int i){
+    if(i>=arr.size()) //base
+    return NULL;   
+    TreeNode *newNode=new TreeNode(arr[i]);  //recurssion
+    newNode->left=solve(arr, 2*i+1);
+    newNode->right=solve(arr, 2*i+2);
     return newNode;
 }
 
+
 // Function to make binary tree from linked list.
 void convert(Node *head, TreeNode *&root) {
-    // Your code here
+    // Your code herevector
     vector<int> arr;
     Node *temp=head;
-    while(temp!=NULL){ 
+    while(temp!=NULL){
         arr.push_back(temp->data);
         temp=temp->next;
-}
-root=solve(arr,0);
+    }
+    root=solve(arr,0);
+   
+
+
 }
