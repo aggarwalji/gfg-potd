@@ -45,7 +45,7 @@ struct Node
 */
 class Solution {
   public:
-  bool palin(string str){
+  bool palindrome(string str){
         int n=str.length();
         for(int i=0;i<n;i++){
             if(str[i]!=str[n-1-i])
@@ -55,17 +55,17 @@ class Solution {
     }
     bool compute(Node* head) {
         // Your code goes here
-        string a="";
+        string s="";
         Node *temp=head;
-        if(temp==NULL)
+        if(temp==NULL) //base cond
         return false;
         
         while(temp){
-            a.append(temp->data);
+            s.append(temp->data);
             temp=temp->next; 
         }
         
-        return palin(a);
+        return palindrome(s);
     }
 };
 
