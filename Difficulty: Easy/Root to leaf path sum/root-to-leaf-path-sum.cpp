@@ -96,13 +96,14 @@ class Solution {
         if(root==NULL){
             return false;
         }
-        if(root->left==NULL && root->right==NULL){
+        //recursive case
+        if(root-> left ==NULL && root->right == NULL){
             return target==root->data;
-            
         }
-        int newtarget=target-root->data;
-        return  hasPathSum(root->left,newtarget) || hasPathSum(root->right,newtarget);
+        int newtar=target - root->data;
+        return hasPathSum(root->left,newtar) || hasPathSum(root->right,newtar);
     }
+    
 };
 
 
